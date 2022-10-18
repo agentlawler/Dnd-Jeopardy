@@ -26,15 +26,15 @@ const jeopardyCats = [
                 level:"300"
             },
             {
-                question:""
-                answers:
-                correct:
+                question:"The highest Level a spell can typically be cast",
+                answers:['9','10','11'],
+                correct:'9',
                 level:"400"
             },
             {
                 question:"This high level spell can permanently change your form if you're not careful.",
-                answers:["Shapechange", "True Polymorph", "True Resurrection"]
-                correct:"True Polymorph"
+                answers:["Shapechange", "True Polymorph", "True Resurrection"],
+                correct:"True Polymorph",
                 level:"500"
             }
         ]
@@ -43,138 +43,138 @@ const jeopardyCats = [
         topic: "Monsters",
         questions:[
             {
-                question:
-                answers:
-                correct:
+                question:"This reptilian foe is also part of the name of a popular tabletop game.",
+                answers:["Goblin","Dragon","Zombie"],
+                correct:"Dragon",
                 level:"100"
             },
             {
-                question:
-                answers:
-                correct:
+                question:"A particularly hardy type of monster. Better Bring a Cleric!",
+                answers:["Plant", "Beast", "Undead"],
+                correct:"Undead",
                 level:"200"
             },
             {
-                question:
-                answers:
-                correct:
+                question:"A Black Dragon has immunity to this damage type",
+                answers:["Necrotic","Acid","Psychic"],
+                correct:"Acid",
                 level:"300"
             },
             {
-                question:
-                answers:
-                correct:
+                question:"An action that powerful creatures can usually use 3 times per round",
+                answers:["Lair Action","Legendary Action","Reaction"],
+                correct:"Legendary Action",
                 level:"400"
             },
             {
-                question:
-                answers:
-                correct:
+                question:'The minimum height or length needed to classify a creature as "Colossal".',
+                answers:["32ft","50ft","64ft"],
+                correct:"64ft",
                 level:"500"
             }
         ]
     },
     {
-        topic: "Feats",
+        topic: "Character",
         questions:[
             {
-                question:
-                answers:
-                correct:
+                question:"The Ability Score connected to how smart you are.",
+                answers:["Charisma", "Strength", "Intelligence"],
+                correct:"Intelligence",
                 level:"100"
             },
             {
-                question:
-                answers:
-                correct:
+                question:"A base game Background that compliments roguish types",
+                answers:['Acolyte', 'Folk Hero', 'Criminal'],
+                correct:'Criminal',
                 level:"200"
             },
             {
-                question:
-                answers:
-                correct:
+                question:"This class is well known for their use of Divine Smite",
+                answers:["Monk","Cleric","Paladin"],
+                correct:"Paladin",
                 level:"300"
             },
             {
-                question:
-                answers:
-                correct:
+                question:"As of the latest official sourcebook, there are this many classes available to choose from",
+                answers:["12","13","14"],
+                correct:"14",
                 level:"400"
             },
             {
-                question:
-                answers:
-                correct:
+                question:"The maximum amount of spell slots a Warlock can have",
+                answers:["4","8","10"],
+                correct:"4",
                 level:"500"
             }
         ]
     },
     {
-        topic: "Classes",
+        topic: "Mechanics",
         questions:[
             {
-                question:
-                answers:
-                correct:
+                question:"The amount of bonus actions you can do per round",
+                answers:["1","2","3"],
+                correct:"3",
                 level:"100"
             },
             {
-                question:
-                answers:
-                correct:
+                question:"What the abbreviation RAW stands for.",
+                answers:["Read And Watch", "Rules As Written", "Rockin' Around the World"],
+                correct:"Rules As Written",
                 level:"200"
             },
             {
-                question:
-                answers:
-                correct:
+                question:"Something you would not add proficiency bonus to",
+                answers:["Attack Bonus", "Damage", "Skill Checks"],
+                correct:"Damage",
                 level:"300"
             },
             {
-                question:
-                answers:
-                correct:
+                question:"Having this condition gives the player disadvantage on ability checks",
+                answers:["Grappled", "Poisoned", "Prone"],
+                correct:"Poisoned",
                 level:"400"
             },
             {
-                question:
-                answers:
-                correct:
+                question:"The least common Saving Throw in the game",
+                answers:["Charisma","Intelligence","Strength"],
+                correct:"Intelligence",
                 level:"500"
             }
         ]
     },
     {
-        topic: "Items",
+        topic: "Pop Culture",
         questions:[
             {
-                question:
-                answers:
-                correct:
+                question:"This DnD god has also been recently featured in tv show Stranger Things",
+                answers:["Asmodeus", "Bahamut", "Vecna"],
+                correct:"Vecna",
                 level:"100"
             },
             {
-                question:
-                answers:
-                correct:
+                question:"The year this game was originally published",
+                answers:["1955","1974","1989"],
+                correct:"1974",
                 level:"200"
             },
             {
-                question:
-                answers:
-                correct:
+                question:'Chris Pine was revealed to be "playing" this class in the most recent "Dungeons & Dragons: Honor Among Thieves" trailer',
+                answers:["Barbarian","Druid","Bard"],
+                correct:"Bard",
                 level:"300"
             },
             {
-                question:
-                answers:
-                correct:
+                question:'Popular Dnd podcast "Critical Role" had a Kickstarter for an animated series that made this amount in its first hour.',
+                answers:["$10,000","$100,000","$1,000,000"],
+                correct:"$1,000,000",
                 level:"400"
             },
             {
-                question:
-                answers:
-                correct:
+                question:"This Action Star also plays DnD in their free time.",
+                answers:["Dwayne Johnson","Mark Whalberg","Vin Diesel"],
+                correct:"Vin Diesel",
                 level:"500"
             }
         ]
