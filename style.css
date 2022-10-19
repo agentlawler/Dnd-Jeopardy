@@ -22,14 +22,26 @@ body {
 
 .columnTitle {
     font-family: 'Anton', sans-serif;
+    text-align: center;
     color: white;
+    font-size: 30px;
 }
 
-.card {
-    width:200px;
-    height:150px;
+.box {
+    font-family: 'Anton', sans-serif;
+    width: 250px;
+    height: 120px;
     background-color: rgba(1, 48, 1, 0.868);
     text-align: center;
     font-size: 75px;
-    margin: 10px;
+    margin: 5px;
+    padding: 0;
+}
+
+.questText {
+    font-size: 14.75px;
+    line-height: 20px;
+    text-align: center;
+    color: whitesmoke;
+    font-family: 'PT Serif', serif;
 }
