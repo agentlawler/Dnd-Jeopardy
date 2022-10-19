@@ -1,0 +1,35 @@
+html {
+    height: 100%;
+}
+
+body {
+    background: url(https://images5.alphacoders.com/886/886632.jpg) no-repeat center center fixed;
+    -webkit-background-size: cover;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#game {
+    display: flex;
+    background-color: rgba(5, 88, 12, 0.781);
+}
+
+.columnTitle {
+    font-family: 'Anton', sans-serif;
+    color: white;
+}
+
+.card {
+    width:200px;
+    height:150px;
+    background-color: rgba(1, 48, 1, 0.868);
+    text-align: center;
+    font-size: 75px;
+    margin: 10px;
+}
