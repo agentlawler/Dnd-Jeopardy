@@ -105,7 +105,7 @@ const jeopardyCats = [
                 },
                 {
                     question:"The maximum amount of spell slots a Warlock can have",
-                    answers:["4","8","10"],
+                    answers:["4","6","8"],
                     correct:"4",
                     value:"500"
                 }
@@ -117,7 +117,7 @@ const jeopardyCats = [
                 {
                     question:"The amount of bonus actions you can do per round",
                     answers:["1","2","3"],
-                    correct:"3",
+                    correct:"1",
                     value:"100"
                 },
                 {
@@ -169,8 +169,8 @@ const jeopardyCats = [
                 },
                 {
                     question:'Popular Dnd podcast "Critical Role" had a Kickstarter for an animated series that made this amount in its first hour.',
-                    answers:["$10,000","$100,000","$1,000,000"],
-                    correct:"$1,000,000",
+                    answers:["$10k","$100k","$1mil"],
+                    correct:"$1mil",
                     value:"400"
                 },
                 {
@@ -231,7 +231,7 @@ function addCategory(category) {
         box.setAttribute('data-answer-1', question.answers[0])
         box.setAttribute('data-answer-2', question.answers[1])
         box.setAttribute('data-answer-3', question.answers[2])
-        box.setAttribute('data-value', box.getAttribute("innerHTML"))
+        box.setAttribute('data-value', box.getInnerHTML())
 
         box.addEventListener("click", openBox)
         //the event listener that runs the function to open the
