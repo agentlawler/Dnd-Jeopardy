@@ -1,5 +1,7 @@
 const game = document.getElementById('game')
-const score = document.getElementById('score')
+const scoreText = document.getElementById('score')
+
+
 
 const jeopardyCats = [
     //This is where all of the questions are going to go
@@ -238,7 +240,8 @@ function addCategory(category) {
     })
 
 }
-
+let score = 0
+//start our score @ 0
 jeopardyCats.forEach(category => addCategory(category))
     //saying to keep adding the columns until it runs out
 
@@ -264,6 +267,86 @@ function openBox() {
     btn3.innerHTML = this.getAttribute('data-answer-3')
     //puts the answer text in the buttons
     
+    btn1.addEventListener('click', getResult)
+    btn2.addEventListener('click', getResult)
+    btn3.addEventListener('click', getResult)
+    //the event listeners for the button, and calling a later function that grabs answers/values
+
     this.append(questText, btn1, btn2, btn3)
     //now tell comp to actually add it to html
+
+    const allBoxes = Array.from(document.querySelectorAll('.box'))
+        //make variable allBoxes out of an array of everything with the class box
+    allBoxes.forEach(box => box.removeEventListener('click', openBox))
+        //make it so that each time the function we are in(openBox) is called, we 
+        //remove the eventListener, disabling the user from clicking on other boxes
+        //while still in the one they picked
 }
+
+function getResult () {
+
+    const allBoxes = Array.from(document.querySelectorAll('.box'))
+        //make an array variable again
+    allBoxes.forEach(box => box.addEventListener("click", openBox))
+        //re-enables the event listeners on other boxes after getting a result
+
+    const answerButton = this.parentElement
+        //each button will contain the data from their parent element
+    
+
+    if (answerButton.getAttribute('data-correct') == this.innerHTML) {
+            //looks to see if innerHTML has text that matches what the 'data-correct' value is
+        score = score + parseInt(answerButton.getAttribute('data-value'))
+            //add the value attached to 'data-value' to your score
+        scoreText.innerHTML = score
+            //show the score
+        answerButton.classList.add('rightAnswer')
+        //changes the class of the button
+
+        //remove text in box within timeout function for time delay
+        setTimeout(() => {
+            while (answerButton.firstChild) {
+                answerButton.removeChild(answerButton.lastChild)
+            }
+            answerButton.innerHTML = answerButton.getAttribute('data-value')
+        }, 250)
+        //show value of card
+    } else {
+        answerButton.classList.add('wrongAnswer')
+        setTimeout(() => {
+            while (answerButton.firstChild) {
+                answerButton.removeChild(answerButton.lastChild)
+            }
+            answerButton.innerHTML = "X"
+        }, 250)
+        //else show an x, they got it wrong
+    }
+    answerButton.removeEventListener("click", openBox)
+}
+
+
+
+////Sources used so far
+    //https://css-tricks.com/perfect-full-page-background-image/
+    //https://www.w3schools.com/cssref/
+    //https://www.youtube.com/watch?v=fYMBkayHmUo
+    //https://fontmeme.com/jeopardy-font/
+    //https://www.youtube.com/watch?v=I8BRAgMrxXM
+    //https://www.youtube.com/watch?v=vYEkEMfoi1c
+    //https://www.w3schools.com/tags/tag_input.asp
+    //https://www.w3schools.com/tags/att_button_type.asp
+    //https://stackoverflow.com/questions/1397592/difference-between-id-and-name-attributes-in-html
+    //https://www.w3schools.com/tags/tag_form.asp
+    //https://www.geeksforgeeks.org/what-is-the-use-of-asterisk-selector-in-css/#:~:text=The%20asterisk%20(*)%20is%20known,the%20elements%20on%20the%20page.
+    //https://stackoverflow.com/questions/6274339/how-can-i-shuffle-an-array
+    //https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Classes
+    //https://developer.mozilla.org/en-US/docs/Web/API/Element
+    //https://developer.mozilla.org/en-US/docs/Web/API/EventTarget/removeEventListener
+    //https://www.w3schools.com/jsref/prop_node_parentelement.asp
+    //https://www.w3schools.com/jsref/jsref_parseint.asp
+    //https://stackoverflow.com/questions/19030742/difference-between-innertext-innerhtml-and-value
+    //https://www.w3schools.com/jsref/met_win_settimeout.asp
+    //https://www.w3schools.com/jsref/prop_node_firstchild.asp
+    //https://www.w3schools.com/jsref/prop_node_lastchild.asp
+    //
+    //prev  notes

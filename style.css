@@ -45,3 +45,7 @@ body {
     color: whitesmoke;
     font-family: 'PT Serif', serif;
 }
+
+button {
+    background-color: rgba(193, 170, 37, 0.858);
+}
