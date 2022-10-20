@@ -1,5 +1,6 @@
 const game = document.getElementById('game')
 const scoreText = document.getElementById('score')
+const answerBox = document.getElementById('answers')
 
 
 
@@ -247,18 +248,24 @@ jeopardyCats.forEach(category => addCategory(category))
 
 function openBox() {
     this.innerHTML = ""
-    //clears out the styling and text of box
+    this.innerText = ""
+    // SUPPOSEDLY clears out the styling and text of box
+
+
     const questText = document.createElement('div')
     questText.classList.add("questText")
     questText.innerHTML = this.getAttribute('data-question')
+    //adds the question text
+
+
     const btn1 = document.createElement('button')
     const btn2 = document.createElement('button')
     const btn3 = document.createElement('button')
-    //Make our buttons
-    //then add their classes
-    btn1.classList.add('btn1')
+    //create the buttons
+    btn1.classList.add("btn1")
     btn2.classList.add('btn2')
     btn3.classList.add('btn3')
+   
 
     //then we add text
 
@@ -272,7 +279,8 @@ function openBox() {
     btn3.addEventListener('click', getResult)
     //the event listeners for the button, and calling a later function that grabs answers/values
 
-    this.append(questText, btn1, btn2, btn3)
+    this.append(questText)
+    answerBox.append(btn1,btn2,btn3)
     //now tell comp to actually add it to html
 
     const allBoxes = Array.from(document.querySelectorAll('.box'))
@@ -289,6 +297,8 @@ function getResult () {
         //make an array variable again
     allBoxes.forEach(box => box.addEventListener("click", openBox))
         //re-enables the event listeners on other boxes after getting a result
+
+
 
     const answerButton = this.parentElement
         //each button will contain the data from their parent element
