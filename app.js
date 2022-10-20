@@ -1,6 +1,6 @@
 const game = document.getElementById('game')
 const scoreText = document.getElementById('score')
-const answerBox = document.getElementById('answers')
+
 
 
 
@@ -262,7 +262,7 @@ function openBox() {
     const btn2 = document.createElement('button')
     const btn3 = document.createElement('button')
     //create the buttons
-    btn1.classList.add("btn1")
+    btn1.classList.add('btn1')
     btn2.classList.add('btn2')
     btn3.classList.add('btn3')
    
@@ -279,8 +279,8 @@ function openBox() {
     btn3.addEventListener('click', getResult)
     //the event listeners for the button, and calling a later function that grabs answers/values
 
-    this.append(questText)
-    answerBox.append(btn1,btn2,btn3)
+    this.append(questText,btn1,btn2,btn3)
+    
     //now tell comp to actually add it to html
 
     const allBoxes = Array.from(document.querySelectorAll('.box'))
