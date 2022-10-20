@@ -28,13 +28,13 @@ const jeopardyCats = [
                     value:"300"
                 },
                 {
-                    question:"The highest Level a spell can typically be cast",
+                    question:"The highest level a spell can typically be cast",
                     answers:['9','10','11'],
                     correct:'9',
                     value:"400"
                 },
                 {
-                    question:"This high value spell can permanently change your form if you're not careful.",
+                    question:"This high level spell can permanently change your form if you're not careful.",
                     answers:["Shapechange", "True Polymorph", "True Resurrection"],
                     correct:"True Polymorph",
                     value:"500"

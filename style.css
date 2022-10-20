@@ -35,27 +35,41 @@ h1 {
 .box {
     font-family: 'Anton', sans-serif;
     width: 250px;
-    height: 120px;
+    max-height: 120px;
     background-color: rgba(1, 48, 1, 0.868);
     text-align: center;
     font-size: 75px;
     margin: 5px;
     padding: 0;
+    
 }
 
 .questText {
-    font-size: 14.75px;
+    font-size: 14.8px;
     line-height: 20px;
     text-align: center;
     color: rgb(182, 182, 182);
     font-family: 'PT Serif', serif;
-    
+    margin-bottom: -25%;
+    max-height: 80%;
+    min-height: 80%;
+    overflow: auto;
 }
 
 button {
     background-color: rgba(193, 170, 37, 0.858);
+    font-size: 0;
     
-    
+}
+
+.btn1 {
+    font-size:12px;
+}
+.btn2 {
+    font-size:12px;
+}
+.btn3 {
+    font-size:12px;
 }
 
 .rightAnswer {
