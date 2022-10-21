@@ -123,7 +123,7 @@ const jeopardyCats = [
                 },
                 {
                     question:"What the abbreviation RAW stands for.",
-                    answers:["Read And Watch", "Rules As Written", "Rockin' Around the World"],
+                    answers:["Read And Watch", "Rules As Written", "Rocks And Worms"],
                     correct:"Rules As Written",
                     value:"200"
                 },
@@ -280,6 +280,7 @@ function openBox() {
     //the event listeners for the button, and calling a later function that grabs answers/values
 
     this.append(questText,btn1,btn2,btn3)
+    
     
     //now tell comp to actually add it to html
 
